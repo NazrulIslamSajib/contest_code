@@ -31,11 +31,13 @@ int main()
               {
                   if(s[j]=='R')
                   {
-                     /// cout<<"s"<<endl;
                       last=j;
-                     // cout<<last<<endl;
-                     f=1;
+                      f=1;
                       break;
+                  }
+                  else
+                  {
+                      last--;
                   }
               }
               if(f==1)
@@ -49,4 +51,3 @@ int main()
     }
     return 0;
 }
- 
