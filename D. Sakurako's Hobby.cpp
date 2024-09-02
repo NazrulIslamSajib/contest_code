@@ -18,6 +18,10 @@ int main()
        string s;
        cin>>s;
        map<long long,long long>mp;
+       for(int i=1;i<=n;i++)
+       {
+           mp[i]=-1;
+       }
        for(i=0;i<n;i++)
        {
            long long x1=i+1,ans=0;
@@ -25,7 +29,7 @@ int main()
            {
                ans++;
            }
-           if(mp[i+1]!=0)
+           if(mp[i+1]!=-1)
            {
                cout<<mp[i+1]<<" ";
                continue;
