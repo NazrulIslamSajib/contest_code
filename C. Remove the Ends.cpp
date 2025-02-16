@@ -20,7 +20,7 @@ int main()
        pre2[n+1]=0;
        for(int i=1;i<=n;i++)
        {
-            if(arr[i]>1)
+            if(arr[i]>=1)
             {
                 pre1[i]=pre1[i-1]+arr[i];
             }
