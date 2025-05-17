@@ -8,30 +8,36 @@ int main()
     cin>>tt;
     while(tt--)
     {
-       long long n,m,p,q;
-       cin>>n>>m>>p>>q;
-       long long arr[n+10],sum=0;
+       long long n;
+       cin>>n;
+       long long arr[n+10],value;
        for(int i=1;i<=n;i++)
        {
-           if(i%p==0)
+           cin>>arr[i];
+           arr[i]=abs(arr[i]);
+           if(i==1)
            {
-               arr[i]=q;
+               value=arr[i];
            }
-           else
-           {
-               arr[i]=0;
-           }
-           sum+=arr[i];
        }
-       if(sum==m || arr[n]==0)
+       sort(arr+1,arr+n+1);
+       int f=0;
+       for(int i=1;i<=(n+1)/2;i++)
+       {
+           if(arr[i]==value)
+           {
+               f=1;
+               break;
+           }
+       }
+       if(f==1 || (n%2==0 && arr[n/2+1]==value))
        {
            cout<<"YES"<<endl;
        }
        else
        {
-            cout<<"NO"<<endl;
+           cout<<"NO"<<endl;
        }
-
     }
     return 0;
 }
